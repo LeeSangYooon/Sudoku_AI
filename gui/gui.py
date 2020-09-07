@@ -71,6 +71,23 @@ class gui:
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_down = True
 
+        keys = pygame.key.get_pressed()
+        to = -1
+        if keys[pygame.K_1]: to = 1
+        elif keys[pygame.K_2]: to = 2
+        elif keys[pygame.K_3]: to = 3
+        elif keys[pygame.K_4]: to = 4
+        elif keys[pygame.K_5]: to = 5
+        elif keys[pygame.K_6]: to = 6
+        elif keys[pygame.K_7]: to = 7
+        elif keys[pygame.K_8]: to = 8
+        elif keys[pygame.K_9]: to = 9
+        elif keys[pygame.K_0]: to = 0
+        if to != -1:
+            self.board.board[self.selected.y][self.selected.x] = to
+
+
+
 
         if mouse_down and 0 < mouse_pos.x - self.space < self.board.size.x * self.pixel_size and \
                 0 < mouse_pos.y - self.space < self.board.size.y * self.pixel_size:
