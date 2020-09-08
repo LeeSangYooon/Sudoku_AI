@@ -10,7 +10,6 @@ class board:
             if list(sorted(horizontal)) != list(range(1, self.size.x + 1)):
                 return False
         for vertical in [[self.board[i][j] for i in range(self.size.x)] for j in range(self.size.y)]:
-            print(vertical)
             if list(sorted(vertical)) != list(range(1, self.size.y + 1)):
                 return False
 

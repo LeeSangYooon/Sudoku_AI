@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0818eb97-d9ac-401c-9f44-449f2a34ce5c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AI/AI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/AI.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI/AI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/board/board.py" beforeDir="false" afterPath="$PROJECT_DIR$/board/board.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,8 +101,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.board" />
         <item itemvalue="Python.카펫" />
+        <item itemvalue="Python.board" />
       </list>
     </recent_temporary>
   </component>
@@ -117,6 +117,14 @@
       <option name="presentableId" value="Default" />
       <updated>1599387644622</updated>
     </task>
+    <task id="LOCAL-00001" summary="asdf commit">
+      <created>1599472917407</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599472917407</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,5 +139,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="asdf commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="asdf commit" />
   </component>
 </project>
