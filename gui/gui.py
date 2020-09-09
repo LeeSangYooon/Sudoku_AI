@@ -45,10 +45,10 @@ class gui:
                                                    self.pixel_size * self.board.size.y], 5)
 
         for n in range(self.board.size.x):
-            w = 5 if n%3==0 else 2
+            w = 3 if n%3==0 else 1
             pygame.draw.line(self.screen, color.GRAY, [self.space + n*self.pixel_size, self.space],[self.space + n*self.pixel_size, self.space + self.pixel_size * self.board.size.y], w)
         for n in range(self.board.size.y):
-            w = 5 if n % 3 == 0 else 2
+            w = 4 if n % 3 == 0 else 1
             pygame.draw.line(self.screen, color.GRAY, [self.space, self.space + n*self.pixel_size],[self.space + self.pixel_size * self.board.size.x, self.space + n*self.pixel_size], w)
 
         space = self.space + self.pixel_size * 0.375
@@ -69,7 +69,7 @@ class gui:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-            if event.type == pygame.MOUSEBUTTONDOWN:
+            if event.type == pygame.MOUSEMOTION:
                 mouse_down = True
 
         keys = pygame.key.get_pressed()
