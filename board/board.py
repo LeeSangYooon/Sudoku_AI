@@ -5,6 +5,9 @@ class board:
         self.size = size # vector2
         self.board = np.zeros(size.x * size.y, dtype=int).reshape(size.y, size.x)  # 0: 모름
 
+    def move(self, pos:vector2, to):
+        self.board[pos.y][pos.x] = to
+
     def solved(self):
         for horizontal in self.board:
             if list(sorted(horizontal)) != list(range(1, self.size.x + 1)):

@@ -7,8 +7,6 @@ board = board(vector2(9, 9))
 
 gui = gui()
 gui.gui_init()
-
+gui.board = board
 while not gui.done:
-    gui.board = board
     event = gui.main_loop()
-    board = gui.board

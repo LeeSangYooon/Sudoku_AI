@@ -2,7 +2,7 @@ import pygame
 from board.vector2 import vector2
 from board.board import board
 from gui.color import color
-
+from AI.AI import AI
 
 
 
@@ -26,7 +26,7 @@ class gui:
 
         self.space = 50
 
-        self.font = pygame.font.Font('resource/font/arial.ttf', 30)
+        self.font = pygame.font.Font('resource/font/arial.ttf', 33)
 
         self.selected = vector2(-1,-1)
 
@@ -45,23 +45,24 @@ class gui:
                                                    self.pixel_size * self.board.size.y], 5)
 
         for n in range(self.board.size.x):
-            w = 5 if n%3==0 else 3
+            w = 5 if n%3==0 else 2
             pygame.draw.line(self.screen, color.GRAY, [self.space + n*self.pixel_size, self.space],[self.space + n*self.pixel_size, self.space + self.pixel_size * self.board.size.y], w)
         for n in range(self.board.size.y):
-            w = 5 if n % 3 == 0 else 3
+            w = 5 if n % 3 == 0 else 2
             pygame.draw.line(self.screen, color.GRAY, [self.space, self.space + n*self.pixel_size],[self.space + self.pixel_size * self.board.size.x, self.space + n*self.pixel_size], w)
 
-        space = self.space + self.pixel_size * 0.41
+        space = self.space + self.pixel_size * 0.375
         for y in range(self.board.size.y):
             for x in range(self.board.size.x):
                 c = color.BLUE if self.selected.x == x and self.selected.y == y else color.GRAY
                 self.renderText(str(self.board.board[y][x]), [space + self.pixel_size*x, space + self.pixel_size*y], c)
-
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
         pygame.display.flip()
 
     def main_loop(self):
-        self.clock.tick(30)
-
+        self.clock.tick(60)
         mouse_pos = vector2(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[1])
         mouse_down = False
         
@@ -85,6 +86,10 @@ class gui:
         elif keys[pygame.K_0]: to = 0
         if to != -1:
             self.board.board[self.selected.y][self.selected.x] = to
+
+        if keys[pygame.K_a]:
+            ai = AI(self.board)
+            ai.solve(self)
 
 
 
